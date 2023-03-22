@@ -1,5 +1,7 @@
 package csStudyCodingTest;
 
+import java.util.Arrays;
+
 public class 최대최소값 {
         public static String solution(String s) {
            // s = "1 2 3 4";
@@ -10,7 +12,6 @@ public class 최대최소값 {
             for(int i = 0; i<repo.length; i++){
                 nums[i] = Integer.parseInt(repo[i]);
             }
-
 
             int min = nums[0]; //1
             int max = nums[0]; //1
