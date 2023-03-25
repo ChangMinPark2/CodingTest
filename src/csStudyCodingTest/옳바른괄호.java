@@ -10,27 +10,27 @@ public  class 옳바른괄호 {
 
         Stack<Character> stack = new Stack<>();
 
-        for(int i=0; i<s.length();i++){
-            char a = s.charAt(i);
+        for (Character a : s.toCharArray()){
 
-            if (a == '('){
+            if (stack.isEmpty()) {
                 stack.push(a);
-            }
+            } else if (stack.isEmpty()) //스택에 값이 있으면
+                return false;
 
-            if(a == ')'){
-                if (stack.isEmpty()){
-                    return false;
-                }
-                else stack.pop();
+            else {
+                stack.pop(); // 닫힌 괄호라면
             }
         }
-        if (!stack.isEmpty()) {
-            answer = false;
-        }
-        return answer;
+
+            if(!stack.isEmpty()){
+                return false;
+            }
+            return stack.isEmpty();
+
     }
 
     public static void main(String[] args) {
-        System.out.println(solution("(())("));
+        System.out.println(solution("((()))"));
     }
 }
+
