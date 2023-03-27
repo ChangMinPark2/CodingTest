@@ -1,4 +1,4 @@
-package csStudyCodingTest;
+package csStudyCodingTest.Level2;
 
 
 public class 정수삼각형 {

@@ -1,4 +1,4 @@
-package csStudyCodingTest;
+package csStudyCodingTest.Level2;
 
 public class JadenCase문자열만들기 {
     public static String solution(String s) {
