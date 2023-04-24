@@ -6,18 +6,16 @@ import java.util.List;
 
 public class 배열만들기1 {
     public static int[] solution(int l, int r) {
+
         int[] answer = {-1};
 
         List<Integer> list = new ArrayList<>();
 
-        for (int i=l; i<=r; i++){
-            String binaryString = String.valueOf(i);
-            int binary = Integer.parseInt(String.valueOf(i), 2);
-            boolean q = binaryString.equals(Integer.toBinaryString(binary));
-            if (q){
+        for (int i=l; i<=r; i++) {
+            char c = String.valueOf(i / 5).charAt(i);
+            if (c == '0' || c == '1') {
                 list.add(i);
             }
-            q = false;
         }
         if (list.isEmpty()){
             return answer;
@@ -28,27 +26,6 @@ public class 배열만들기1 {
             answer[i] = list.get(i);
         }
         return answer;
-
-
-//        int binary1 = Integer.parseInt(String.valueOf(l/5), 2); //1
-//
-//        int binary2 = Integer.parseInt(String.valueOf(r/5), 2); //7
-//
-//
-//        List<Integer> list = new ArrayList<>();
-//
-//        for (int i = binary1; i<=binary2; i++){
-//                list.add(5 * Integer.parseInt(Integer.toBinaryString(i)));
-//        }
-//
-//        answer = new int[list.size()];
-//
-//
-//        for (int i=0; i<list.size(); i++){
-//            answer[i] = list.get(i);
-//        }
-
-//        return answer;
     }
 
     public static void main(String[] args) {
@@ -81,6 +58,6 @@ public class 배열만들기1 {
 //            answer[i] = list.get(i);
 //        }
 
-       System.out.println(Arrays.toString(solution(10, 500)));
+       System.out.println(Arrays.toString(solution(0, 555)));
     }
 }
