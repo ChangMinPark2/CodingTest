@@ -19,6 +19,7 @@ public class 최대공약수와최대공배수 {
     static int method(int a, int b){
         if (a%b==0){
             return b;
+
         }
         return method(b, a%b);
     }
