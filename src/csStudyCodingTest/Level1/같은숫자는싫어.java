@@ -9,5 +9,10 @@ public class 같은숫자는싫어 {
         if(a == 2){
             System.out.println(a);
         } else System.out.println(b);
+
+
+        if (a == 3){
+            System.out.println(a + b);
+        }
     }
 }
