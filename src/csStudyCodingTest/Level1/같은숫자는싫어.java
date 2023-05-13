@@ -6,5 +6,8 @@ public class 같은숫자는싫어 {
         int b = 2;
 
         System.out.println(a+b);
+        if(a == 2){
+            System.out.println(a);
+        } else System.out.println(b);
     }
 }
