@@ -10,6 +10,12 @@ public class 같은숫자는싫어 {
 
         List<Integer> list = new ArrayList<>();
 
+        List<String> list1 = new ArrayList<>();
+
+        String i;
+        for(list1 :i){
+
+        }
 
         list.contains(list);
 
