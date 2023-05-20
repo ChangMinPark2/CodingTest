@@ -1,6 +1,7 @@
 package csStudyCodingTest.Level1;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class 같은숫자는싫어 {
@@ -12,6 +13,8 @@ public class 같은숫자는싫어 {
 
         List<String> list1 = new ArrayList<>();
 
+        List<Integer> list2 = new LinkedList<>();
+        list2.add()
         String i;
         for(list1 :i){
 
