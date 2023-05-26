@@ -1,8 +1,6 @@
 package csStudyCodingTest.Level1;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class 같은숫자는싫어 {
     public static void main(String[] args) {
@@ -14,7 +12,8 @@ public class 같은숫자는싫어 {
         List<String> list1 = new ArrayList<>();
 
         List<Integer> list2 = new LinkedList<>();
-        list2.add()
+        list2.add();
+        Set<Integer> a = new HashSet<>();
         String i;
         for(list1 :i){
 
