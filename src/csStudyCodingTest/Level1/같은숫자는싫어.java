@@ -14,7 +14,9 @@ public class 같은숫자는싫어 {
         List<Integer> list2 = new LinkedList<>();
         list2.add();
         Set<Integer> a = new HashSet<>();
-        HashMap<Long, LinkedList> a = new HashMap<>()
+        HashMap<Long, LinkedList> a = new HashMap<>();
+        Queue<Integer> a = new Queue<Integer>() {
+        }
         String i;
         for(list1 :i){
 
