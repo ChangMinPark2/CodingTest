@@ -31,7 +31,7 @@ public class 베스트앨범 {
 
         //key값에 해당하는 value의 값을 내림차순 한다.
         Collections.sort(genre, (o1, o2) -> hashMap.get(o2) - hashMap.get(o1));
-//        Collections.sort(genre, Collections);
+//        Collections.sort(genre, Collections.reverseOrder());
 
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < genre.size(); i++){
