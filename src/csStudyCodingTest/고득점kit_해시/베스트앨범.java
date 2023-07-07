@@ -1,4 +1,4 @@
-package csStudyCodingTest.해시;
+package csStudyCodingTest.고득점kit_해시;
 
 import java.util.ArrayList;
 import java.util.Arrays;

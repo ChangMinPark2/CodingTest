@@ -1,7 +1,6 @@
-package csStudyCodingTest.해시;
+package csStudyCodingTest.고득점kit_해시;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /***
  * [의상의 이름] [의상의 종류]
