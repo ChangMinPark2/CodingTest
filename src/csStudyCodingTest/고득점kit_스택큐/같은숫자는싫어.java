@@ -1,4 +1,4 @@
-package csStudyCodingTest.고득점kit_스택;
+package csStudyCodingTest.고득점kit_스택큐;
 
 import java.util.Arrays;
 import java.util.Stack;

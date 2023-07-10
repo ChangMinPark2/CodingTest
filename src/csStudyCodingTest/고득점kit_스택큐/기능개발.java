@@ -1,4 +1,4 @@
-package csStudyCodingTest.고득점kit_스택;
+package csStudyCodingTest.고득점kit_스택큐;
 
 import java.util.*;
 
@@ -23,6 +23,7 @@ public class 기능개발 {
         List<Integer> list = new ArrayList<>();
 
         int x = queue.poll();
+        System.out.println(x);
         int count = 1;
         while (!queue.isEmpty()){
             if (x >= queue.peek()){
