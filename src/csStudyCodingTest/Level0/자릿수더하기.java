@@ -7,7 +7,7 @@ public class 자릿수더하기 {
         String a = String.valueOf(n);
         String[] b = a.split("");
         for (int i = 0; i<b.length; i++){
-            answer+=Integer.valueOf(b[i]);
+            answer+=Integer.parseInt(b[i]);
         }
         return answer;
     }
