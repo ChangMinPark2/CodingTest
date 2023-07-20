@@ -10,6 +10,7 @@ public class 더맵게 {
         for (int i : scoville){
             pq.add(i);
         }
+
         while (!pq.isEmpty()){
             if (pq.peek() < K){
                 if (pq.size() < 2) {
@@ -26,7 +27,7 @@ public class 더맵게 {
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3};
+        int[] a = {12, 2, 3, 4, 10, 5};
         System.out.println(solution(a, 200));
     }
 
