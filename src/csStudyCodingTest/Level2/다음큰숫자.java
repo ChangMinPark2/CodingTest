@@ -6,14 +6,33 @@ package csStudyCodingTest.Level2;
  * 조건 3. n의 다음 큰 숫자는 조건 1, 2를 만족하는 수 중 가장 작은 수 입니다.
  */
 public class 다음큰숫자 {
-//    public int solution(int n) {
-//        int answer = 0;
-//        String binaryStr = "";
-//        for (int i = n+1; ; i++){
-//            binaryStr = Integer.toBinaryString(i);
-////            if (binaryStr.contains("1")) int cout ++;
-//        }
-//
-//        return answer;
-//    }
+    public static int solution(int n) {
+        int answer = 0;
+        String binaryStr = Integer.toBinaryString(n);
+        int origin = count(binaryStr);
+
+        for (int i = n+1; i<1000000; i++){
+            String binaryString = Integer.toBinaryString(i);
+            if (origin == count(binaryString)){
+                answer = i;
+                break;
+            }
+        }
+
+        return answer;
+    }
+
+    public static int count(String a){
+        int count = 0;
+        for (int i = 0; i<a.length(); i++){
+            if (a.charAt(i)=='1'){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solution(15));
+    }
 }
