@@ -16,7 +16,7 @@ public class 가장큰수 {
         for (int i=0; i<numbers.length; i++){
             repo[i] = String.valueOf(numbers[i]);
         }
-        //TODO : Collections정렬 람다식 다시 공부하기
+        //TODO : Collections정렬 람다식 다시 공부하기 : 혁준 왈 문자열이라 다름
         Arrays.sort(repo, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
         if (repo[0].equals("0")){
             return "0";
