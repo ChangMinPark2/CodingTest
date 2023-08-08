@@ -21,7 +21,7 @@ import java.util.ArrayList;
  */
 public class 소수찾기 {
     static ArrayList<Integer> arr = new ArrayList<>();
-    static boolean[] check = new boolean[7];
+    static boolean[] check = new boolean[7]; //백트래킹을 하려면 무조건 boolean값 있어야함. (visited)
 
     public static int solution(String numbers) {
         int answer = 0;
