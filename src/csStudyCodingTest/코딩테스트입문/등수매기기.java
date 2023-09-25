@@ -1,0 +1,24 @@
+package csStudyCodingTest.코딩테스트입문;
+
+public class 등수매기기 {
+    public int[] solution(int[][] score) {
+        int[] answer = new int[score.length];
+        double[] repo = new double[score.length];
+
+        for(int i = 0; i < score.length; i++){
+            repo[i] = (double)(score[i][0] + score[i][1])/2;
+        }
+
+        for(int i = 0; i < score.length; i++){
+            int rank = 1;
+
+            for(int j = 0; j < score.length; j++){
+                if(repo[i] < repo[j]){
+                    rank++;
+                }
+            }
+            answer[i] = rank;
+        }
+        return answer;
+    }
+}
