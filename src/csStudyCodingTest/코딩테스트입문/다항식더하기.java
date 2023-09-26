@@ -1,11 +1,21 @@
 package csStudyCodingTest.코딩테스트입문;
 
+import java.util.Arrays;
+
 public class 다항식더하기 {
     public String solution(String polynomial) {
         String answer = "";
-        String[] arr = polynomial.split(" +");
+        String[] arr = polynomial.split(" ");
+        //x + x + x
+        System.out.println(Arrays.toString(arr));
         int strNum = 0;
         int num = 0;
+
+        if (arr[0].contains("x")){
+            System.out.println("x만 있어서 포함하지 않는다");
+        } else {
+            System.out.println("과연");
+        }
 
         for (String s : arr) {
             if (s.equals("x")) {
