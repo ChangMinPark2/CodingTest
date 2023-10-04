@@ -2,6 +2,7 @@ package csStudyCodingTest.Level0;
 
 import java.util.*;
 //level 0
+//test commit
 public class 배열길이에따라다른연산하기 {
 
     public int[] solution(int[] arr, int n) {
