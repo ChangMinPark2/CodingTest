@@ -1,5 +1,8 @@
 package csStudyCodingTest.코딩테스트입문;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class 겹치는선분의길이 {
     public int solution(int[][] lines) {
         int answer = 0;
@@ -21,4 +24,11 @@ public class 겹치는선분의길이 {
 
         return answer;
     }
+
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+        System.out.println(Arrays.toString(arr));
+    }
+
+
 }
