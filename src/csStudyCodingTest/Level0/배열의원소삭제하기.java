@@ -7,7 +7,7 @@ package csStudyCodingTest.Level0;
 import java.util.*;
 
 public class 배열의원소삭제하기 {
-    public int[] solution(int[] arr, int[] delete_list) {
+    public static int[] solution(int[] arr, int[] delete_list) {
         int[] answer = {};
 
         List<Integer> list = new ArrayList<>();
@@ -15,11 +15,18 @@ public class 배열의원소삭제하기 {
         for(int i = 0; i < arr.length; i++){
             list.add(arr[i]);
         }
+        System.out.println(list.get(0));
+        System.out.println(list.get(1));
+        System.out.println(list.get(2));
+        System.out.println(list.get(3));
+        System.out.println(list.get(4));
+        System.out.println(list.size());
+        System.out.println(arr.length);
 
-        for(int i = 0; i < list.size(); i++){
-            for(int j = 0; j<delete_list.length;j++) {
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < delete_list.length; j++) {
                 if (arr[i] == delete_list[j]) {
-                    list.remove(Integer.valueOf(arr[i]));
+                    list.remove(list.indexOf(arr[i]));
                 }
             }
         }
@@ -29,5 +36,12 @@ public class 배열의원소삭제하기 {
                 .toArray();
 
         return answer;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {293, 1000, 395, 678, 94};
+        int[] delete = {94, 777, 104, 1000, 1, 12};
+
+        System.out.println(Arrays.toString(solution(arr, delete)));
     }
 }
