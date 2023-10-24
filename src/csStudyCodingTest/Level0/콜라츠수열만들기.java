@@ -28,4 +28,16 @@ public class 콜라츠수열만들기 {
 
         return answer;
     }
+
+    public static void main(String[] args) {
+        String a = "120ㅁㅁ3";
+        char[] b = a.toCharArray();
+        for(int i = 0; i < b.length; i++){
+            if (!Character.isDigit(b[i])){
+                System.out.println("숫자가 아닙니다.");
+            } else {
+                System.out.println("숫자입니다.");
+            }
+        }
+    }
 }
