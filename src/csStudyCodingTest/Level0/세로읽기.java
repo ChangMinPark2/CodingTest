@@ -1,4 +1,5 @@
 package csStudyCodingTest.Level0;
+
 // charAt(i) possible
 public class 세로읽기 {
     public String solution(String my_string, int m, int c) {
@@ -7,7 +8,7 @@ public class 세로읽기 {
 
         char[] ch = my_string.toCharArray();
 
-        for(int i = c - 1; i < ch.length; i+=m){
+        for (int i = c - 1; i < ch.length; i += m) {
             sb.append(ch[i]);
         }
 
