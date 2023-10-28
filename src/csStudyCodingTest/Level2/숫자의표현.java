@@ -1,5 +1,8 @@
 package csStudyCodingTest.Level2;
 
+/**
+ * 커밋 테스트
+ */
 public class 숫자의표현 {
     public int solution(int n) {
         int answer = 1;
