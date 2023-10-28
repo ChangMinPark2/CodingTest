@@ -1,5 +1,5 @@
 package csStudyCodingTest.Level0;
-
+// charAt(i) possible
 public class 세로읽기 {
     public String solution(String my_string, int m, int c) {
 
