@@ -11,9 +11,9 @@ public class 다음큰숫자 {
         String binaryStr = Integer.toBinaryString(n);
         int origin = count(binaryStr);
 
-        for (int i = n+1; i<1000000; i++){
+        for (int i = n + 1; i < 1000000; i++) {
             String binaryString = Integer.toBinaryString(i);
-            if (origin == count(binaryString)){
+            if (origin == count(binaryString)) {
                 answer = i;
                 break;
             }
@@ -22,10 +22,10 @@ public class 다음큰숫자 {
         return answer;
     }
 
-    public static int count(String a){
+    public static int count(String a) {
         int count = 0;
-        for (int i = 0; i<a.length(); i++){
-            if (a.charAt(i)=='1'){
+        for (int i = 0; i < a.length(); i++) {
+            if (a.charAt(i) == '1') {
                 count++;
             }
         }
