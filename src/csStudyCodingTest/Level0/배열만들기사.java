@@ -8,7 +8,7 @@ public class 배열만들기사 {
         int index = 0;
 
         while(true){
-            if(stack.isEmpty()){
+            if(stack.empty()){
                 stack.push(arr[index]);
                 index++;
             } else {
