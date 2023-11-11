@@ -28,8 +28,8 @@ public class dnddkgkstest {
 
     }
 
-    public static String abc(){
-        System.out.println("안녕");
-        return abcddd;
+
+    private List<String> toString(List<String> list){
+       return list;
     }
 }
