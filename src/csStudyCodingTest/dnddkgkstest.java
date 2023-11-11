@@ -2,6 +2,7 @@ package csStudyCodingTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class dnddkgkstest {
@@ -9,11 +10,21 @@ public class dnddkgkstest {
     private static String abcddd = "abc";
 
     public static void main(String[] args) {
-        String a = ",a,b,c,";
+        String a = "티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-1";
 
-        String[] b = a.split(",");
+        HashMap<String, Integer> menuMap = new HashMap<>();
+        String[] menuAndCounts = a.split(",");
 
-        System.out.println(Arrays.toString(b));
+        for (String menuAndCount : menuAndCounts) {
+            String[] menuAndCountArr = menuAndCount.split("-");
+            String menu = (menuAndCountArr[0]);
+            Integer count = Integer.parseInt(menuAndCountArr[1]);
+
+            menuMap.put(menu, count);
+        }
+
+
+        System.out.println(menuMap);
 
     }
 
