@@ -1,5 +1,7 @@
 package csStudyCodingTest.Level0;
-
+/*
+* char 형태의 아스키코드를 알기
+* */
 public class 문자개수세기 {
 
     public int[] solution(String my_string) {
