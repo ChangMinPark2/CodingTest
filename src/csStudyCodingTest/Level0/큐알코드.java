@@ -17,7 +17,7 @@ public class 큐알코드 {
     }
     public String solution2(int q, int r, String code) {
         return IntStream.range(0, code.length()).
-                filter(operand -> operand % q == r).
+                filter(index -> index % q == r).
                 mapToObj(i -> String.valueOf(code.charAt(i))).
                 collect(Collectors.joining());
     }
