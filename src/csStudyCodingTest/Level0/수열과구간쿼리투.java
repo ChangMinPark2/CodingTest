@@ -2,7 +2,7 @@ package csStudyCodingTest.Level0;
 import java.util.*;
 
 public class 수열과구간쿼리투 {
-    public int[] solution(int[] arr, int[][] queries) {
+    public static int[] solution(int[] arr, int[][] queries) {
         int[] answer = new int[queries.length];
 
         for(int i = 0; i < queries.length; i++){
