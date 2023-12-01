@@ -3,6 +3,7 @@ package csStudyCodingTest.Level0;
 public class 정사각형으로만들기 {
     public int[][] solution(int[][] arr) {
         int[][] answer = {};
+
         if (arr[0].length > arr.length) {
             answer = new int[arr[0].length][arr[0].length];
 
@@ -25,6 +26,18 @@ public class 정사각형으로만들기 {
         }
 
         return arr;
+    }
+    public int[][] solution3(int[][] arr) {
+        int[][] answer = {};
+        int max = arr[0].length > arr.length ? arr[0].length : arr.length;
+        answer = new int[max][max];
+
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[0].length; j++){
+                answer[i][j] = arr[i][j];
+            }
+        }
+        return answer;
     }
 
     public int[][] solution2(int[][] arr) {
