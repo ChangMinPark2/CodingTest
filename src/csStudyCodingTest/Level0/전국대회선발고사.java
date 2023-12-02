@@ -9,8 +9,7 @@ import java.util.stream.IntStream;
 public class 전국대회선발고사 {
     public int solution(int[] rank, boolean[] attendance) {
 
-        List<Integer> list = new ArrayList<>();
-        list = IntStream.range(0, rank.length)
+        List<Integer> list = IntStream.range(0, rank.length)
                 .filter(i -> attendance[i])
                 .map(i -> rank[i])
                 .sorted()
