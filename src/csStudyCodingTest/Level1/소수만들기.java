@@ -8,13 +8,12 @@ public class 소수만들기 {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 for (int k = j + 1; k < nums.length; k++) {
-                    int num = nums[i] + nums[j] + nums[k]; //값을 담아
-                    if (sosu(num)) //소수가 맞을 경우
+                    if (sosu(nums[i] + nums[j] + nums[k])) //소수가 맞을 경우
                         answer++;
                 }
             }
-
         }
+
         return answer;
     }
 
@@ -25,6 +24,7 @@ public class 소수만들기 {
                 count++;
             }
         }
-        return count == 1 ? true : false;
+
+        return count == 1;
     }
 }
