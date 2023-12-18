@@ -9,9 +9,8 @@ public class 과일장수 {
 
         List<Integer> list = Arrays.stream(score)
                 .boxed()
+                .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
-
-        Collections.sort(list, Collections.reverseOrder());
 
         List<Integer> repo = new ArrayList<>();
 
