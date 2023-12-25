@@ -5,9 +5,16 @@ public class 옹알이투 {
     public int solution(String[] babbling) {
         String[] a = {"aya", "ye", "woo", "ma"};
         int answer = 0;
+
         for(int i = 0; i < babbling.length; i++){
             for(int j = 0; j < a.length; j++){
-                babbling[i].replace(a[j], "1");
+                if(babbling[i].contains("ayaaya") ||
+                        babbling[i].contains("yeye") ||
+                        babbling[i].contains("woowoo") ||
+                        babbling[i].contains("mama")) {
+                    continue;
+                }
+                babbling[i] = babbling[i].replace(a[j], "1");
             }
         }
 
