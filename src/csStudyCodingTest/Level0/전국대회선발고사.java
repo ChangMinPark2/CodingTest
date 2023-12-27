@@ -1,14 +1,12 @@
 package csStudyCodingTest.Level0;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class 전국대회선발고사 {
     public int solution(int[] rank, boolean[] attendance) {
-
         List<Integer> list = IntStream.range(0, rank.length)
                 .filter(i -> attendance[i])
                 .map(i -> rank[i])
