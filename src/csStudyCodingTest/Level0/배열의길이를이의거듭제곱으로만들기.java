@@ -21,4 +21,22 @@ public class 배열의길이를이의거듭제곱으로만들기 {
 
         return answer;
     }
+
+    public int[] solution2(int[] arr) {
+        int length = 1;
+
+        while (length < arr.length) {
+            length *= 2;
+        }
+
+        return Arrays.copyOf(arr, length);
+    }
+
+    public void adsf(){
+        while (true){
+            if (true){
+                System.out.println();
+            }
+        }
+    }
 }
