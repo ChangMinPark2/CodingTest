@@ -1,5 +1,7 @@
 package csStudyCodingTest.Level2;
 import java.util.*;
+//행의 크기 N -> y축
+//열의 크기 M -> X축
 public class 게임맵최단거리 {
     static int[] dx = {0, 0, -1, 1};
     static int[] dy = {-1, 1, 0, 0};
@@ -12,7 +14,7 @@ public class 게임맵최단거리 {
         visited = new boolean[n][m];
         bfs(maps);
 
-        return !visited[n - 1][m - 1] ? -1 : count;
+        return count;
     }
 
     static void bfs(int[][] maps) {
@@ -30,29 +32,34 @@ public class 게임맵최단거리 {
             }
 
             for (int i = 0; i < 4; i++) {
-                int X = a + dx[i];
-                int Y = b + dy[i];
+                int x = b + dx[i];
+                int y = a + dy[i]; //i = 1일때 내려감.
 
-                if (isCheck(X, Y) && !visited[X][Y] && maps[X][Y] == 1) {
-                    visited[X][Y] = true;
-                    queue.add(new int[]{X, Y, count + 1});
+                if (isCheck(y, x) && !visited[y][x] && maps[y][x] == 1) {
+                    System.out.println(i);
+                    visited[y][x] = true;
+                    queue.add(new int[]{y, x, count + 1});
                 }
             }
         }
     }
 
-    private static boolean isCheck(int X, int Y) {
-        return X >= 0 && X < n && Y >= 0 && Y < m;
+    private static boolean isCheck(int x, int y) { //n이 행 -> y축
+//        return X >= 0 && X < n && Y >= 0 && Y < m;
+        return x >= 0 && x < m && y >= 0 && y < n;
     }
 
 
     public static void main(String[] args) {
         int[][] maps = {
-                {1, 0, 1, 1, 1},
-                {1, 0, 1, 0, 1},
-                {1, 0, 1, 1, 1},
-                {1, 1, 1, 0, 1},
-                {0, 0, 0, 0, 1}
+                {1, 0, 0},
+                {1, 0, 0},
+                {1, 0, 0}
+//                {1, 0, 1, 1, 1},
+//                {1, 0, 1, 0, 1},
+//                {1, 0, 1, 1, 1},
+//                {1, 1, 1, 0, 1},
+//                {0, 0, 0, 0, 1}
         };
 
         System.out.println(solution(maps));
