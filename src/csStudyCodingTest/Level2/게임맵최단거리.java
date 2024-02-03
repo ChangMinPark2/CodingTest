@@ -12,54 +12,51 @@ public class 게임맵최단거리 {
         n = maps.length;
         m = maps[0].length;
         visited = new boolean[n][m];
-        bfs(maps);
+        bfs(0, 0, maps);
 
-        return count;
+        return !visited[n - 1][m - 1] ? -1 : count;
+
     }
 
-    static void bfs(int[][] maps) {
+    static void bfs(int a, int b, int[][] maps) {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0, 1});
         visited[0][0] = true;
 
         while (!queue.isEmpty()) {
             int[] repo = queue.remove();
-            int a = repo[0];
-            int b = repo[1];
+            a = repo[0];
+            b = repo[1];
             count = repo[2];
-            if (a == n - 1 && b == m - 1) {
-                break;
-            }
+            if (a == n - 1 && b == m - 1) break;
 
             for (int i = 0; i < 4; i++) {
-                int x = b + dx[i];
-                int y = a + dy[i]; //i = 1일때 내려감.
+                int X = a + dx[i];
+                int Y = b + dy[i];
 
-                if (isCheck(y, x) && !visited[y][x] && maps[y][x] == 1) {
-                    System.out.println(i);
-                    visited[y][x] = true;
-                    queue.add(new int[]{y, x, count + 1});
+                if (isCheck(X, Y) && !visited[X][Y] && maps[X][Y] == 1) {
+                    visited[X][Y] = true;
+                    queue.add(new int[]{X, Y, count + 1});
                 }
             }
         }
     }
-
-    private static boolean isCheck(int x, int y) { //n이 행 -> y축
-//        return X >= 0 && X < n && Y >= 0 && Y < m;
-        return x >= 0 && x < m && y >= 0 && y < n;
+    private static boolean isCheck(int X, int Y) {
+        return X >= 0 && X < n && Y >= 0 && Y < m;
     }
+
 
 
     public static void main(String[] args) {
         int[][] maps = {
-                {1, 0, 0},
-                {1, 0, 0},
-                {1, 0, 0}
-//                {1, 0, 1, 1, 1},
-//                {1, 0, 1, 0, 1},
-//                {1, 0, 1, 1, 1},
-//                {1, 1, 1, 0, 1},
-//                {0, 0, 0, 0, 1}
+//                {1, 0, 0},
+//                {1, 0, 0},
+//                {1, 0, 0}
+                {1, 0, 1, 1, 1},
+                {1, 0, 1, 0, 1},
+                {1, 0, 1, 1, 1},
+                {1, 1, 1, 0, 1},
+                {0, 0, 0, 0, 1}
         };
 
         System.out.println(solution(maps));
