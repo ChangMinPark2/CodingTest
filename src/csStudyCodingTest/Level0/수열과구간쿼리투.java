@@ -24,7 +24,9 @@ public class 수열과구간쿼리투 {
     public static void main(String[] args) {
         int[] arr = {0, 1, 2, 4, 3};
         int[][] arrr = {{0, 4, 2}, {0, 3, 2}, {0, 2, 2}};
+        List<String> list = new ArrayList<>();
+        list.add(" O] \n[ 1");
+        System.out.println(list);
 
-        System.out.println(solution(arr, arrr));
     }
 }
